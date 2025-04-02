@@ -1,0 +1,17 @@
+.kk {
+  text-align: center;
+}
+
+.ll {
+  border: solid 5px;
+}
+
+.ii {
+  display: flex;
+  flex-direction: column;
+}
+
+.dd {
+  width: 200px;
+  height: 18px;
+}
