@@ -20,6 +20,7 @@
         <label for="id_nome"
           >Nome completo:
           <input
+            class="uu"
             type="text"
             name="nome"
             id="id_nome"
@@ -44,6 +45,7 @@
             id="email"
             name="email"
             placeholder="Informe seu email"
+            required
           /><br />
 
           <label for="senha">Senha:</label>
@@ -53,6 +55,7 @@
             id="senha"
             name="senha"
             placeholder="Informe sua senha"
+            required
           /><br />
 
           <label for="telefone">Telefone:</label>
@@ -61,39 +64,77 @@
             type="tel"
             id="telefone"
             name="telefone"
-            placeholder="Informe sua senha"
+            placeholder="Informe seu telefone"
+            required
           /><br />
-        </div>
-        <br />
-        <label for="id_file">
-          Arquivo:
+
+          <label for="telefone">Data de nascimento:</label>
           <input
+            class="dd"
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="dd/mm/aaaa"
+            required
+          />
+
+          <br />
+
+          <label for="telefone">Site:</label>
+          <input
+            class="dd"
+            type="url"
+            id="site"
+            name="site"
+            placeholder="insira a url"
+            required
+          />
+
+          <br />
+
+          <label for="id_file">Foto:</label>
+
+          <input
+            class="ww"
             type="file"
-            name="arquivo"
-            id="id_file"
+            name="foto"
+            id="id_foto"
             accept=".jpg, .png, .pdf, .docx, .txt"
             required
           />
-        </label>
+
+          <br />
+
+          <label for="biografia">Biografia:</label>
+          <input
+            class="bb"
+            class="dd"
+            type="text"
+            id="biografia"
+            name="biografia"
+          />
+        </div>
         <br />
 
         <fieldset>
-          <legend>Hobbies</legend>
-          <label for="id_fut">
+          <legend>Níveis de conhecimento</legend>
+          <label for="id_html">
             <input
+              class="pp"
               type="range"
               name="hobbies"
               min="0"
               max="10"
               step="1"
               value="5"
-              id="id_fut"
-              value="futebol"
+              id="id_html"
+              value="html"
+              required
             />
-            Futebol
+            HTML
           </label>
 
-          <label for="id_fut">
+          <label for="id_css">
             <input
               type="range"
               name="hobbies"
@@ -101,13 +142,14 @@
               max="10"
               step="1"
               value="5"
-              id="id_basquete"
-              value="futebol"
+              id="id_css"
+              value="css"
+              required
             />
-            Basquete
+            CSS
           </label>
 
-          <label for="id_fut">
+          <label for="id_js">
             <input
               type="range"
               name="hobbies"
@@ -115,12 +157,14 @@
               max="10"
               step="1"
               value="5"
-              id="id_fut"
-              value="futebol"
+              id="id_js"
+              value="5"
+              required
             />
-            Futebol
+            JS
           </label>
         </fieldset>
+        <br />
 
         <div class="botoes">
           <button type="submit">Enviar</button>
