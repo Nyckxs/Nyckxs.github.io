@@ -1,0 +1,63 @@
+.kk {
+    text-align: center;
+    border-radius: 5px;
+    color: aliceblue;
+  }
+  
+  .ll {
+    border: solid 5px;
+    border-radius: 5px;
+    background-color: rgb(30, 22, 69);
+  }
+  
+  .ii {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    color: aliceblue;
+  }
+  
+  .dd {
+    width: 200px;
+    height: 18px;
+    margin-left: 10px;
+    border-radius: 5px;
+  }
+  
+  .ww {
+  text-align: center;
+  border: solid 1.6px;
+  width: 290px;
+  border-radius: 5px;
+  
+   
+  }
+  
+  .bb {
+    height: 100px;
+    width: 400px;
+    border-radius: 5px;
+    margin-left: 10px;
+    
+  }
+  
+  .uu {
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 190px;
+  }
+  
+  .botoes {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+ .zz{
+    color: aliceblue;
+    margin-left: 11px;
+ }
+
+ .ss{
+    color: aliceblue;
+ }
