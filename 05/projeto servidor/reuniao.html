@@ -5,31 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>reuniao</title>
     <link rel="stylesheet" href="StyleReuniao.css">
-    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/61b7aec7ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="script.js"></script>
+   
 
 </head>
 <body> 
     
           <h1> <i class="fa-solid fa-users"></i>  Cadastro de Reunião</h1>
    
-  <div>
-        <form>
-        <label 
-        for="id_MotivoReuniao"
-        class="tamanho">Selecione o Motivo da Reuniao
-          
-            
-           
-        </label>
-
-
-
-    </form>
-  </div>
-
-    
-    
+  <div class="form-container">
+  <form>
+    <label for="id_motivo" class="tamanho">
+      <strong>Selecione o motivo da Reunião</strong>
+      <select id="id_motivo">
+        <option value="" selected disabled>Selecione o motivo</option>
+        <option value="reuniao">Reunião</option>
+        <option value="treinamento">Treinamento</option>
+        <option value="outros">Outros</option>
+      </select>
+    </label>
+    <!-- Adicione outros campos do formulário aqui, se quiser -->
+  </form>
+</div>
+  
+  
     
 </body>
 </html>
