@@ -1,22 +1,27 @@
-const form = document.getElementById("id_form");
+    const form = document.getElementById("id_form");
 
-form.addEventListener("submit", function (event) {
-    event.preventDefault(); 
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    const email = document.getElementById("id_email").value;    
-    const senha = document.getElementById("id_senha").value;
-
-    if (email === "admin@gmail.com" && senha === "1472"){
-        alert("Login realizado com sucesso!");
-        window.location.href = "reuniao.html"; 
+        const email = document.getElementById("id_email").value;
+        const senha = document.getElementById("id_senha").value;
+    if (email === email && senha === senha) {
+        
+        Swal.fire({
+            icon: 'success',
+            title: 'Login realizado com sucesso!',
+            showConfirmButton: false,
+            timer: 1500,
+            backdrop: false,
+            position: 'top-center',
+        }).then(() => {
+            window.location.href = "reuniao.html";
+        });
     } else {
-        alert("Login ou senha incorretos!");
-    }
-
-
-
-
-
-
-
-})
+        Swal.fire({
+            icon: 'error',
+            title: 'Login ou senha incorretos!',
+            showConfirmButton: true
+        });
+    }   
+    });
