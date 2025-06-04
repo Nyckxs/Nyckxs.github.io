@@ -77,38 +77,3 @@ input {
     color: black;
     transform: scale(1.1); 
 }
-
-.choices {
-    width: 200px !important; /* ajuste conforme desejar */
-    border-radius: 10px !important;
-    margin: 0 auto;
-    max-width: 100%;
-}
-
-/* Caixa do select */
-.choices__inner {
-    width: 180px !important;
-    min-height: 44px;
-    border-radius: 10px !important;
-    font-size: 1.1rem;
-    background: #fff;
-    border: 1px solid #ccc;
-    padding-right: 36px !important;
-    margin-top: 1px; /* diminua para trazer a seta para dentro */
-}
-
-/* Dropdown das opções */
-.choices__list--dropdown {
-    border-radius: 0 0 10px 10px !important;
-    font-size: 1rem;
-    
-}
-
-/* Opções */
-.choices__list--dropdown .choices__item {
-    color: #222 !important;
-    background: #fff !important;
-    border-radius: 0 !important;
-    padding: 10px 16px;
-}
-

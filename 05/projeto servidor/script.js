@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Choices.js para o select de motivo
-  const element = document.getElementById('id_motivo');
-  if (element) {
-    new Choices(element, {
-      searchEnabled: false,
-      itemSelectText: '',
-      placeholder: true,
-      placeholderValue: 'Selecione o motivo'
-    });
-  }
 
-  // Lógica do formulário de login (se existir na página)
   const form = document.getElementById("id_form");
   if (form) {
     form.addEventListener("submit", function (event) {

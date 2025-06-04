@@ -1,4 +1,4 @@
-let indiceEditando = null; // Variável para armazenar o índice do item que está sendo editado
+let indiceEditando = null; 
 document.addEventListener('DOMContentLoaded', function() {
     const motivoSelect = document.getElementById('id_MotivoReuniao');
     const outroInput = document.getElementById('id_OutroMotivo');
@@ -7,30 +7,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const formNumero = document.getElementById('id_FormNumeroReuniao');
     const inputNumero = document.getElementById('id_NumeroReuniao');
 
-    // --- ESTE BLOCO DEVE FICAR AQUI DENTRO ---
+
     if (motivoSelect) {
         motivoSelect.addEventListener('change', function() {
             if (this.value === 'outro') {
                 outroInput.style.display = 'block';
             } else {
                 outroInput.style.display = 'none';
-                outroInput.value = ''; // Limpa o campo se não for "Outro"
+                outroInput.value = ''; 
             }
         });
     }
-    // -----------------------------------------
 
-    // Função para buscar todas as reuniões salvas
     function getReunioes() {
         return JSON.parse(localStorage.getItem('reunioes')) || [];
     }
 
-    // Função para salvar todas as reuniões
     function setReunioes(reunioes) {
         localStorage.setItem('reunioes', JSON.stringify(reunioes));
     }
 
-    // Mostrar último motivo salvo
+    
     function mostrarMotivoSalvo() {
         const reunioes = getReunioes();
         if (reunioes.length > 0) {
@@ -39,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Salvar motivo
+    
     let indiceEditando = null;
     if (form) {
         form.addEventListener('submit', function(event) {
@@ -51,10 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
             let reunioes = getReunioes();
 
             if (indiceEditando !== null) {
-                // Atualiza o item existente
+                
                 reunioes[indiceEditando].motivo = motivoFinal;
                 setReunioes(reunioes);
-                indiceEditando = null; // Limpa o modo edição
+                indiceEditando = null; 
                 Swal.fire({
                     icon: 'success',
                     title: 'Motivo da reunião editado com sucesso!',
@@ -64,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     position: 'top-center',
                 });
             } else {
-                // Adiciona novo item normalmente
+                
                 reunioes.push({ motivo: motivoFinal, numero: null });
                 setReunioes(reunioes);
                 Swal.fire({
@@ -81,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Salvar número
+    
     if (formNumero && inputNumero) {
         formNumero.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -90,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire('Atenção', 'Cadastre um motivo antes de cadastrar o número!');
                 return;
             }
-            if (indiceEditando !== null) {
+            else if (indiceEditando !== null) {
                 reunioes[indiceEditando].numero = inputNumero.value;
                 setReunioes(reunioes);
                 indiceEditando = null;
@@ -129,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnEditar = document.createElement('button');
     btnEditar.textContent = 'Editar';
     btnEditar.type = 'button';
-    btnConsultar.after(btnEditar); // <-- Adicione esta linha!
+    btnConsultar.after(btnEditar);
 
     btnConsultar.addEventListener('click', function() {
         const reunioes = getReunioes();
@@ -173,7 +170,7 @@ motivoSelect.value = motivosPadrao.includes(reuniao.motivo) ? reuniao.motivo : '
 outroInput.value = motivosPadrao.includes(reuniao.motivo) ? '' : reuniao.motivo;
 outroInput.style.display = motivosPadrao.includes(reuniao.motivo) ? 'none' : 'block';
             inputNumero.value = reuniao.numero || '';
-            indiceEditando = Number(index); // <-- Salva o índice para edição
+            indiceEditando = Number(index); 
         }
     });
 });
@@ -203,7 +200,7 @@ bntExcluir.addEventListener('click', function() {
         if (result.isConfirmed) {
             const select = document.getElementById('selectReuniao');
             const index = select.value;
-            reunioes.splice(index, 1); // Remove o item selecionado
+            reunioes.splice(index, 1); 
             setReunioes(reunioes);
             mostrarMotivoSalvo();
             Swal.fire({
@@ -218,7 +215,7 @@ bntExcluir.addEventListener('click', function() {
     });
 
 });
-    // Inicializa o Choices.js para o select de motivo
+
     if (motivoSelect) {
         new Choices(motivoSelect, {
             searchEnabled: false,
